@@ -17,13 +17,20 @@ p {
 margin: 3%;
 }
 
+.button-container{
+    width:150px;
+    margin-left: 45%;
+}
+
 button {
-    width: 150px;
+    width: 100%;
     background-color:goldenrod;
     color: #007d13;
     border-color: white;
     padding: 5px 0;
+    margin: 5px;
     border-radius: 3px;
+    display: block;
 }
 
 button:hover {

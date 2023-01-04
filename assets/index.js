@@ -6,8 +6,12 @@ let message = ""
 
 let sum = firstCard + secondCard;
 let messageEl = document.getElementById("message-el");
+let sumEl = document.getElementById("sum-el");
+let cardsEl = document.getElementById ("cards-el");
 
 function startGame(){
+    sumEl.textContent = "sum: " + sum;
+    cardsEl.textContent = "Cards: " + firstCard + " " + secondCard;
     if (sum <= 20) {
         message = `You have ${sum} points do you want to draw a new card`;
         } else if (sum === 21) {
@@ -21,3 +25,6 @@ function startGame(){
         messageEl.textContent = message;
 }
 
+function newCard(){
+    console.log("drawing new card");
+}
