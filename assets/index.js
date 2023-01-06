@@ -150,7 +150,12 @@ function playerWon(){
 
     winLoseMessage = `You Won: ${playerBet}$ `;
     winLoseEL.textContent = winLoseMessage;
-    playerChips = playerChips + playerBet * 2;
+    if (hasBlackJack){
+        playerChips = playerChips + playerBet * 2;
+    }
+    else{
+        playerChips = playerChips + playerBet * 2;
+    }
     playerChipsEl.textContent = "Your Chips: $" + playerChips;
     endGame();
 }
@@ -160,4 +165,5 @@ function endGame(){
     playerBet = 10;
     playerBetEl.textContent = "Your Bet: $" + playerBet;
     isAlive = false;
+    hasBlackJack = false;
 }
